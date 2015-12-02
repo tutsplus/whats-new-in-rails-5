@@ -148,6 +148,7 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
+    puma (2.15.3)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
@@ -181,6 +182,7 @@ DEPENDENCIES
   coffee-rails!
   jbuilder (~> 2.0)
   jquery-rails
+  puma
   rack!
   rails!
   sass-rails!
