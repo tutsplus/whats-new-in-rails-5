@@ -1,10 +1,26 @@
-%p#notice= notice
-%p
-  %strong Name:
-  = @project.name
+%h1= @project.name
+
 %p
   %strong Ends at:
   = @project.ends_at
 = link_to 'Edit', edit_project_path(@project)
 |
 = link_to 'Back', projects_path
+
+%h3 Tasks
+
+-unless @project.tasks.any?
+  %p.text-muted There are no tasks for this project yet.
+
+%ul
+  -@project.tasks.each do |task|
+    %li
+      =check_box "task_#{task.id}", :done, checked: task.done
+      =task.name
+
+= form_for [ @project, @project.tasks.build ] do |f|
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.submit 'Save', class: "btn btn-default"

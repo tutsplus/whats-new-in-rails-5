@@ -1,18 +1,17 @@
-%p#notice= notice
 %h1 Projects
-%table
+
+%table.table.table-hover
   %thead
     %tr
       %th Name
       %th Ends at
-      %th{:colspan => "3"}
+      %th{:colspan => "2"}
   %tbody
     - @projects.each do |project|
       %tr
-        %td= project.name
+        %td= link_to project.name, project
         %td= project.ends_at
-        %td= link_to 'Show', project
         %td= link_to 'Edit', edit_project_path(project)
         %td= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Project', new_project_path
+
+%p= link_to 'New Project', new_project_path

@@ -7,4 +7,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    = render "nav"
+    =content_tag :div, notice, class: "bg-success" if notice
+    =content_tag :div, alert, class: "bg-danger" if alert
     = yield
