@@ -14,6 +14,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', github: "rails/coffee-rails"
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'devise', github: "twalpole/devise", branch: "rails5"
+gem 'gravatar_image_tag'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -21,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 
 group :development, :test do
   gem 'byebug'
+  gem 'letter_opener'
 end
 
 group :development do
