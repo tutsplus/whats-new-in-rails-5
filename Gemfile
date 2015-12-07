@@ -18,6 +18,7 @@ gem 'devise', github: "twalpole/devise", branch: "rails5"
 gem 'gravatar_image_tag'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 

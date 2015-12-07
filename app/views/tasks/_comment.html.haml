@@ -1,8 +1,8 @@
 %li{id: "comment:#{comment.id}"}
   %p.pull-left.comment-user-image
-    =gravatar_image_tag current_user.email, gravatar: { size: 50 }
+    =gravatar_image_tag comment.user.email, gravatar: { size: 50 }
   %p
-    %strong=current_user.email
+    %strong=comment.user.email
     %small.text-muted
       =time_ago_in_words comment.created_at
       ago

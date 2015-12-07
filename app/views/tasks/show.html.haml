@@ -1,5 +1,5 @@
 %h1
-  = check_box "task:#{@task.id}", :done, checked: @task.done
+  = check_box "task:#{@task.id}", :done, checked: @task.done, class: "task-done", data: { id: @task.id }
   = @task.name
 
 %p

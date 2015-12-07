@@ -41,10 +41,9 @@ class TasksController < ApplicationController
   # PATCH/PUT /tasks/1
   # PATCH/PUT /tasks/1.json
   def update
-    @project = Project.find params[:project_id]
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to [ @project, @task ], notice: 'Task was successfully updated.' }
+        format.html { redirect_to [ @task.project, @task ], notice: 'Task was successfully updated.' }
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit }

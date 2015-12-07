@@ -21,7 +21,7 @@
 %ul.list-group.col-md-4
   -@project.tasks.each do |task|
     %li.list-group-item
-      =check_box "task_#{task.id}", :done, checked: task.done
+      =check_box "task:#{task.id}", :done, checked: task.done, class: "task-done", data: { id: task.id }
       =link_to task.name, [ @project, task ]
   %li.list-group-item
     = form_for [ @project, @project.tasks.build ] do |f|
