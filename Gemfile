@@ -12,6 +12,8 @@ gem 'bootstrap-sass'
 gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', github: "rails/coffee-rails"
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 
 gem 'jquery-rails'
 gem 'turbolinks'

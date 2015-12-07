@@ -9,9 +9,13 @@
   %tbody
     - @projects.each do |project|
       %tr
-        %td= link_to project.name, project
-        %td= project.ends_at
+        %td
+          %span.badge= project.tasks.size
+          = link_to project.name, project
+        %td= l project.ends_at, format: "%B %d, %Y"
         %td= link_to 'Edit', edit_project_path(project)
         %td= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
+
+=paginate @projects, theme: "twitter-bootstrap-3"
 
 %p= link_to 'New Project', new_project_path
