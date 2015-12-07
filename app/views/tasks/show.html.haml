@@ -1,15 +1,25 @@
-%p#notice= notice
-
-%p
-  %b Name:
+%h1
+  = check_box "task:#{@task.id}", :done, checked: @task.done
   = @task.name
+
 %p
   %b Project:
-  = @task.project
-%p
-  %b Done:
-  = @task.done
+  = link_to @task.project.name, @task.project
 
-= link_to 'Edit', edit_task_path(@task)
-\|
-= link_to 'Back', tasks_path
+= link_to 'Edit', edit_project_task_path(@task.project, @task)
+
+%h3 Comments
+
+-unless @task.comments.any?
+  %p.text-muted There are no comments for this task yet.
+
+%ul.list-unstyled#comments
+  -@task.comments.each do |comment|
+    =render partial: "comment", locals: { comment: comment }
+
+  %li.new-comment
+    =form_for [ @task.project, @task, @task.comments.build ], remote: true do |f|
+      %p
+        =f.text_area :body, class: "form-control", placeholder: "Post your comment here."
+      %p
+        =f.submit 'Post Comment', class: "btn btn-primary"

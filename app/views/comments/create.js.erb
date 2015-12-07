@@ -1,0 +1,3 @@
+$("#comments .new-comment").before("<%= escape_javascript(
+  render(partial: "tasks/comment", locals: { comment: @comment })
+) %>");
