@@ -3,6 +3,12 @@
 %p
   %strong Ends at:
   = @project.ends_at
+
+%p.text-muted
+  Created
+  =time_ago_in_words @project.created_at
+  ago.
+
 = link_to 'Edit', edit_project_path(@project)
 |
 = link_to 'Back', projects_path
@@ -12,15 +18,14 @@
 -unless @project.tasks.any?
   %p.text-muted There are no tasks for this project yet.
 
-%ul
+%ul.list-group.col-md-4
   -@project.tasks.each do |task|
-    %li
+    %li.list-group-item
       =check_box "task_#{task.id}", :done, checked: task.done
       =task.name
-
-= form_for [ @project, @project.tasks.build ] do |f|
-  %p
-    = f.label :name
-    = f.text_field :name
-  %p
-    = f.submit 'Save', class: "btn btn-default"
+  %li.list-group-item
+    = form_for [ @project, @project.tasks.build ] do |f|
+      .input-group
+        = f.text_field :name, class: "form-control", placeholder: "Quickly add a new task"
+        %span.input-group-btn
+          = f.submit 'Add task', class: "btn btn-primary"
