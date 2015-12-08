@@ -1,3 +1,1 @@
-$("#comments .new-comment").before("<%= escape_javascript(
-  render(partial: "tasks/comment", locals: { comment: @comment })
-) %>");
+Turbolinks.visit("<%= project_task_path(@comment.task.project, @comment.task) %>", { change: [ 'comments' ]})
