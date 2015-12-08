@@ -45,6 +45,7 @@ class TasksController < ApplicationController
       if @task.update(task_params)
         format.html { redirect_to [ @task.project, @task ], notice: 'Task was successfully updated.' }
         format.json { render :show, status: :ok, location: @task }
+        format.js { head :ok }
       else
         format.html { render :edit }
         format.json { render json: @task.errors, status: :unprocessable_entity }

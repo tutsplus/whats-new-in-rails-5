@@ -19,7 +19,8 @@ gem 'gravatar_image_tag'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'turbolinks'
+gem 'jquery-turbolinks'
+gem 'turbolinks', github: "rails/turbolinks"
 gem 'jbuilder', '~> 2.0'
 
 group :development, :test do
