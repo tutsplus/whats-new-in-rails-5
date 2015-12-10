@@ -2,6 +2,8 @@
   = check_box "task:#{@task.id}", :done, checked: @task.done, class: "task-done", data: { id: @task.id }
   = @task.name
 
+=hidden_field_tag :task_id, @task.id, data: { "task-id" => @task.id }
+
 %p
   %b Project:
   = link_to @task.project.name, @task.project

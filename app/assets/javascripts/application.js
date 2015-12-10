@@ -15,4 +15,5 @@
 //= require jquery-ui/effect-highlight
 //= require turbolinks
 //= require jquery.turbolinks
+//= require cable
 //= require_tree .

@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
+  match "/websocket", :to => ActionCable.server, via: [:get, :post]
+
   root "projects#index"
 end

@@ -6,6 +6,7 @@ gem 'sprockets', github: "rails/sprockets"
 gem 'sass-rails', github: "rails/sass-rails"
 gem 'arel', github: "rails/arel"
 gem 'rack', github: "rack/rack"
+gem 'actioncable', github: 'rails/actioncable'
 gem 'puma'
 gem 'haml-rails'
 gem 'bootstrap-sass'

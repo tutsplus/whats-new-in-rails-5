@@ -1,9 +1,23 @@
 GIT
   remote: git://github.com/rack/rack.git
-  revision: c393176b0edf3e5d06cabbb6eb9d9c7a07b2afa7
+  revision: 96ae9b9fed8d6809383b6f48a5884437e76f8ca4
   specs:
     rack (2.0.0.alpha)
       json
+
+GIT
+  remote: git://github.com/rails/actioncable.git
+  revision: 0e283fed20ce7a25ddb0e8993d50c0e16e78d30d
+  specs:
+    actioncable (0.0.3)
+      actionpack (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      celluloid (~> 0.16.0)
+      coffee-rails
+      em-hiredis (~> 0.3.0)
+      faye-websocket (~> 0.10.0)
+      redis (~> 3.0)
+      websocket-driver (~> 0.6.1)
 
 GIT
   remote: git://github.com/rails/arel.git
@@ -21,7 +35,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 65443ceb0d55e1445b28e31e772629424e6755c3
+  revision: b05801754f6423a1d90954ef3f6e2f5dc55c6320
   specs:
     actionmailer (5.0.0.alpha)
       actionpack (= 5.0.0.alpha)
@@ -98,7 +112,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets.git
-  revision: 7d1b99be42c7b354548ac2f03c103ffe8b2cb3b8
+  revision: c35a637a26faa775912e24ee7e42d1e7dd2a39a5
   specs:
     sprockets (4.0.0)
       concurrent-ruby (~> 1.0)
@@ -137,7 +151,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.8)
+    addressable (2.4.0)
     autoprefixer-rails (6.1.2)
       execjs
       json
@@ -150,14 +164,23 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.1)
+    celluloid (0.16.0)
+      timers (~> 4.0.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.0)
     debug_inspector (0.0.2)
+    em-hiredis (0.3.0)
+      eventmachine (~> 1.0)
+      hiredis (~> 0.5.0)
     erubis (2.7.0)
+    eventmachine (1.0.8)
     execjs (2.6.0)
+    faye-websocket (0.10.2)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.5.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     gravatar_image_tag (1.2.0)
@@ -169,6 +192,8 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hiredis (0.5.2)
+    hitimes (1.2.3)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -219,6 +244,7 @@ GEM
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
     rake (10.4.2)
+    redis (3.2.2)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     ruby_parser (3.7.2)
@@ -230,6 +256,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
+    timers (4.0.4)
+      hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
@@ -237,11 +265,15 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    websocket-driver (0.6.3)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  actioncable!
   arel!
   bootstrap-kaminari-views
   bootstrap-sass
