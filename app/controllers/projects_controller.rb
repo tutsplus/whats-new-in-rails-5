@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :do_nothing, only: [ :nothing ]
 
   # GET /projects
   # GET /projects.json
@@ -61,6 +62,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def nothing
+    head :ok
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
@@ -70,5 +75,9 @@ class ProjectsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(:name, :ends_at)
+    end
+
+    def do_nothing
+      logger.debug "DOING NOTHING"
     end
 end
