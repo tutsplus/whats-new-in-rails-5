@@ -1,2 +1,2 @@
-App.cable.taskChannel.send({ text: "Hello?" });
+App.cable.taskChannel.send({ text: "Your task has been updated!" });
 Turbolinks.visit("<%= project_task_path(@comment.task.project, @comment.task) %>", { change: [ 'comments' ]})
