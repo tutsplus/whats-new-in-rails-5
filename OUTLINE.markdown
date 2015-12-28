@@ -53,7 +53,7 @@ lesson.
 
 **Related links**
 
-[XML serializer for ActiveRecord](https://github.com/rails/activemodel-serializers-xml)
+* [XML serializer for ActiveRecord](https://github.com/rails/activemodel-serializers-xml)
 
 ## 2.2. Upcoming Changes to Existing Features
 
@@ -62,8 +62,8 @@ suffered modifications in order to do a better job.
 
 **Related links**
 
-[`belongs_to` is now required in ActiveRecord by default](http://github.com/rails/rails/pull/18937)
-[`validates_acceptance_of` accepts true](http://github.com/rails/rails/pull/18439)
+* [`belongs_to` is now required in ActiveRecord by default](http://github.com/rails/rails/pull/18937)
+* [`validates_acceptance_of` accepts true](http://github.com/rails/rails/pull/18439)
 
 ## 2.4. Rails API
 
@@ -72,7 +72,7 @@ change is the fact that it's going be baked into Rails 5.
 
 **Related links**
 
-[Rails API course on Tuts+](http://code.tutsplus.com/courses/create-a-rails-api)
+* [Rails API course on Tuts+](http://code.tutsplus.com/courses/create-a-rails-api)
 
 ## 2.5. Turbolinks 3
 
@@ -81,7 +81,7 @@ features. In this lesson, we'll cover partial replacement as the main addition.
 
 **Related links**
 
-[Turbolinks on GitHub](http://github.com/rails/turbolinks)
+* [Turbolinks on GitHub](http://github.com/rails/turbolinks)
 
 ## 2.6. ActionCable
 
@@ -90,7 +90,7 @@ Learn how you can use this technology for real-time features.
 
 **Related links**
 
-[ActionCable on GitHub](http://github.com/rails/actioncable)
+* [ActionCable on GitHub](http://github.com/rails/actioncable)
 
 ## 2.7. Sprockets 4
 
